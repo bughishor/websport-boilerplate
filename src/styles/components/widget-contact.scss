@@ -1,0 +1,40 @@
+.widget-contact {
+	background: $secondary;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		background: $primary;
+		z-index: 1;
+		width: 200%;
+		height: 100%;
+		display: block;
+		top: 0;
+		right: 50%;
+		position: absolute;
+		transform: skewX(-15deg);
+	}
+
+	.image {
+		position: absolute;
+		z-index: 1;
+		width: 500px;
+		top: 30px;
+		left: calc(50% - 250px);
+
+		@include mobile {
+			top: 300px;
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	h4,
+	p {
+		color: $white;
+	}
+}

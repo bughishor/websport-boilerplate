@@ -1,0 +1,45 @@
+.widget-results {
+    .result-card {
+        position: relative;
+        overflow: hidden;
+
+        .result-type {
+            position: absolute;
+            top: -60px;
+            left: -10px;
+            font-weight: bold;
+            font-size: 200px;
+            opacity: 0.3;
+            color: $success;
+
+            &.is-draw {
+                color: $warning;
+            }
+
+            &.is-loss {
+                color: $danger;
+            }
+        }
+    }
+
+    .result-info {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        .result-teams {
+            font-size: 1.75rem;
+            margin: 10px 0;
+        }
+
+        .result-score {
+            display: inline-block;
+            letter-spacing: 5px;
+            color: $white;
+            padding: 10px 15px;
+            background: $primary;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+}

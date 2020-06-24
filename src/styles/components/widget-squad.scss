@@ -1,0 +1,86 @@
+.widget-squad {
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		background: $primary;
+		opacity: 0.7;
+		z-index: 1;
+		width: 200%;
+		height: 100%;
+		display: block;
+		top: 0;
+		right: 50%;
+		position: absolute;
+		transform: skewX(-15deg);
+	}
+
+	&:after {
+		content: '';
+		background: $secondary;
+		opacity: 0.7;
+		z-index: 1;
+		width: 200%;
+		height: 100%;
+		display: block;
+		top: 0;
+		left: 50%;
+		position: absolute;
+		transform: skewX(-15deg);
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+
+		> .content {
+			text-align: center;
+		}
+	}
+
+	.widget-squad__header,
+	.widget-squad__subtitle {
+		color: $white;
+		text-align: center;
+
+		strong {
+			color: $white;
+			text-transform: uppercase;
+		}
+	}
+
+	.widget-squad__header {
+		text-transform: uppercase;
+	}
+
+	.player-card {
+		padding: 20px;
+
+		.card {
+			background-color: rgba($white, 0.8);
+		}
+	}
+
+	.shirt-number {
+		background: $primary;
+		font-size: 20px;
+		font-weight: 500;
+		color: $white;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid $white;
+	}
+
+	.BrainhubCarousel__dot {
+		background: none;
+
+		&:before {
+			background: $white;
+		}
+	}
+}

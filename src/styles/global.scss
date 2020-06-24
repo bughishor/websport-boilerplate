@@ -1,0 +1,21 @@
+body {
+    letter-spacing: 1px;
+}
+
+.BrainhubCarousel__dot {
+    background: none;
+
+    &:before {
+        background: $white;
+    }
+}
+
+.BrainhubCarousel__arrows {
+	background-color: $primary;
+	border: 1px solid $primary;
+
+	&:hover:enabled {
+        border-color: $primary;
+		background-color: transparent;
+	}
+}

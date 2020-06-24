@@ -5,4 +5,4 @@
  */
 
 // import "./src/styles/reset.scss"
-import "./src/styles/config.scss"
+// import "./src/styles/config.scss"

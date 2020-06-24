@@ -1,0 +1,54 @@
+.box-wrapper {
+	padding: 1.5rem;
+	width: 100%;
+
+	.box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.heading {
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 2px;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 5px;
+			width: 35%;
+			transition: .3s ease all;
+			background: $primary;
+			margin-top: -5px;
+		}
+	}
+
+	.image {
+		display: flex;
+		
+		img {
+			align-self: center;
+		}
+	}
+
+
+	&:hover .heading:after {
+		width: 100%;
+	}
+}
+
+.BrainhubCarousel__arrows {
+	background-color: $primary;
+	border: 2px solid $primary;
+
+	&:hover:enabled {
+		background-color: $white;
+		
+		span {
+			border-color: $primary;
+		}
+	}
+}

@@ -1,0 +1,101 @@
+.widget-next-fixture {
+	border-top: 1px solid #eee;
+	background: $white;
+}
+
+.fixture-box-wrapper {
+	background: $primary;
+	width: 100%;
+	padding: 10px;
+
+	h3.title {
+		position: relative;
+		z-index: 2;
+		display: inline-block;
+		background: $white;
+	}
+
+	.fixture-box {
+		background: white;
+		width: 100%;
+		height: 100%;
+		padding: 30px 20px;
+		position: relative;
+
+		.image {
+			position: absolute;
+			width: 200px;
+			margin: 0;
+			top: -100px;
+			right: -30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 10px solid $primary;
+			z-index: 1;
+		}
+
+		.title {
+			position: relative;
+			z-index: 1;
+		}
+
+		.fixture-type {
+			position: absolute;
+			transform: rotateZ(270deg);
+			top: 30px;
+			left: -40px;
+		}
+
+		.fixture-vs {
+			position: absolute;
+			top: -20px;
+			right: 20px;
+			font-size: 9rem;
+			opacity: .2;
+			line-height: 100%;
+			font-weight: bold;
+			color: $primary;
+		}
+
+		@include tablet {
+			.fixture-vs {
+				right: auto;
+				left: 250px;
+			}
+
+			.image {
+				width: 325px;
+				top: 30px;
+			}
+		}
+
+		@include desktop {
+			.image {
+				width: 550px;
+			}
+		}
+	}
+	
+	&:hover {
+		background: linear-gradient(250deg, rgba($secondary, 1) 0%, rgba($primary, 1) 85%);
+		
+		.fixture-box {
+			.fixture-vs {
+				color: $secondary;
+			}
+
+			.image {
+				border-color: $secondary;
+			}
+		}
+	}
+
+	@include widescreen {
+		width: 1000px;
+
+		.fixture-box .image {
+			right: -170px;
+		}
+	}
+}

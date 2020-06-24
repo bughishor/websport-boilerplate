@@ -1,0 +1,90 @@
+.social-header {
+	background: $secondary;
+	border-top: 5px solid $primary;
+	padding: 20px 1.5rem;
+
+	h1 {
+		color: $white;
+		font-weight: 300;
+
+		span {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+
+	&--inverted {
+		background: $primary;
+		border-color: $secondary;
+	}
+
+	&--inverted-text {
+		.social-buttons a {
+			color: $primary;
+
+			&:hover {
+				color: $dark;
+			}
+		}
+
+		h1 {
+			color: $primary;
+		}
+	}
+
+	&--inverted-dark {
+		.social-buttons a {
+			color: $dark;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+
+		h1 {
+			color: $dark;
+		}
+	}
+
+	@include desktop {
+		border-width: 10px;
+
+		.container {
+			flex-direction: row;
+		}
+
+		h1 {
+			text-align: right;
+			margin-bottom: 0;
+		}
+	}
+	
+	@include mobile {
+		.container .level {
+			display: flex;
+			align-items: center;
+			flex-direction: column-reverse;
+			text-align: center;
+
+			.level-right {
+				margin: 0 0 15px;
+			}
+		}
+	}
+}
+
+.social-buttons {
+	display: flex;
+
+	a {
+		font-size: 30px;
+		display: flex;
+		color: $white;
+		margin-right: 10px;
+
+		&:hover {
+			color: $white;
+			opacity: .4;
+		}
+	}
+}

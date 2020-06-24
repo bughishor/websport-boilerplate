@@ -1,0 +1,14 @@
+@include desktop {
+	.navbar-item img {
+		max-height: 4rem !important;
+	}
+}
+
+@include desktop {
+	.navbar-link,
+	.navbar-item {
+		text-transform: uppercase;
+		padding: 0.5rem 1.5rem;
+		letter-spacing: 2px;
+	}
+}
